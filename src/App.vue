@@ -17,7 +17,14 @@ export default {
   components: {
     "v-search":Search,
     "v-list":List
-  }
+  },
+  methods: {
+    ...mapMutations(["showTip"])
+  },
+  mounted() {
+    // 每次刷新时显示Tip
+    this.showTip()
+  },
 }
 </script>
 
